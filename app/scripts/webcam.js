@@ -134,7 +134,10 @@ angular.module('webcam', [])
             return;
           }
 
-          var mediaConstraint = { video: true, audio: false };
+          var mediaConstraint = angular.extend(
+            { video: true, audio: false },
+            $scope.config.constraints
+          );
           navigator.getMedia(mediaConstraint, onSuccess, onFailure);
 
           /* Start streaming the webcam data when the video element can play
