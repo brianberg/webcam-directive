@@ -43,7 +43,6 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= yeoman.dist %>/scripts',
             '!<%= yeoman.dist %>/.git*'
           ]
         }]
@@ -79,7 +78,7 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/scripts/scripts.js': [
+          '<%= yeoman.dist %>/webcam.js': [
             '.tmp/scripts/{,*/}*.js',
             '<%= yeoman.app %>/scripts/{,*/}*.js'
           ]
@@ -90,7 +89,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/webcam.min.js': [
-            '<%= yeoman.dist %>/scripts/scripts.js'
+            '<%= yeoman.dist %>/webcam.js'
           ],
         }
       }
